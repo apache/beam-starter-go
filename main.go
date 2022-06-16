@@ -14,7 +14,7 @@ var (
 	input_text = flag.String("input-text", "Default input text", "Input text to print.")
 )
 
-type Result = struct {
+type Result struct {
 	Pipeline    *beam.Pipeline
 	Scope       beam.Scope
 	PCollection beam.PCollection
