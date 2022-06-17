@@ -17,13 +17,8 @@ var (
 
 func init() {
 	// DoFns should be registered with Beam to be available in distributed runners.
-	beam.RegisterFunction(toTitleCase)
+	beam.RegisterFunction(strings.Title)
 	beam.RegisterFunction(logAndEmit)
-}
-
-// A simple function would take the element as an argument and return a single value.
-func toTitleCase(element string) string {
-	return strings.Title(element)
 }
 
 // You can also access the Context and "emit" zero or more values like FlatMap.
@@ -34,7 +29,7 @@ func logAndEmit(ctx context.Context, element string, emit func(string)) {
 
 func MyPipeline(scope beam.Scope, input_text string) beam.PCollection {
 	elements := beam.Create(scope, "hello", "world!", input_text)
-	elements = beam.ParDo(scope, toTitleCase, elements)
+	elements = beam.ParDo(scope, strings.Title, elements)
 	return beam.ParDo(scope, logAndEmit, elements)
 }
 
