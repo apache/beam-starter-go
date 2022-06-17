@@ -35,7 +35,7 @@ func main() {
 
 	ctx := context.Background()
 	pipeline, scope := beam.NewPipelineWithRoot()
-	_ = my_pipeline(scope, *input_text)
+	my_pipeline(scope, *input_text)
 
 	// Run the pipeline. You can specify your runner with the --runner flag.
 	if err := beamx.Run(ctx, pipeline); err != nil {
