@@ -27,7 +27,7 @@ func logAndEmit(ctx context.Context, element string, emit func(string)) {
 	emit(element)
 }
 
-func MyPipeline(scope beam.Scope, input_text string) beam.PCollection {
+func myPipeline(scope beam.Scope, input_text string) beam.PCollection {
 	elements := beam.Create(scope, "hello", "world!", input_text)
 	elements = beam.ParDo(scope, strings.Title, elements)
 	return beam.ParDo(scope, logAndEmit, elements)
@@ -39,7 +39,7 @@ func main() {
 
 	ctx := context.Background()
 	pipeline, scope := beam.NewPipelineWithRoot()
-	MyPipeline(scope, *input_text)
+	myPipeline(scope, *input_text)
 
 	// Run the pipeline. You can specify your runner with the --runner flag.
 	if err := beamx.Run(ctx, pipeline); err != nil {

@@ -14,7 +14,7 @@ func TestPipeline(t *testing.T) {
 	pipeline, scope := beam.NewPipelineWithRoot()
 
 	// Note that the order of the elements doesn't matter.
-	elements := MyPipeline(scope, "Test")
+	elements := myPipeline(scope, "Test")
 	passert.Equals(scope, elements, "Test", "Hello", "World!")
 	ptest.RunAndValidate(t, pipeline)
 }
