@@ -2,7 +2,7 @@
 
 🎉🎊 Thanks for taking the time to contribute! 🎉🎊
 
-There are many ways to contribute, here are some.
+There are many ways to contribute. Here are some.
 
 ## Filing an issue
 
@@ -65,5 +65,5 @@ page in the GitHub docs.
 ## Contributing to Apache Beam
 
 For information on how to contribute to
-[Apache Beam](https://github.com/apache/beam), see to the
+[Apache Beam](https://github.com/apache/beam), see the
 [Contribution guide](https://beam.apache.org/contribute/).
