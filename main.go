@@ -26,8 +26,7 @@ func printAndEmit(element string, emit func(string)) {
 
 func my_pipeline(scope beam.Scope, input_text string) beam.PCollection {
 	elements := beam.Create(scope, "Hello", "World!", input_text)
-	elements = beam.ParDo(scope, printAndEmit, elements)
-	return elements
+	return beam.ParDo(scope, printAndEmit, elements)
 }
 
 func main() {
