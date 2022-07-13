@@ -8,6 +8,7 @@ import (
 
 	"github.com/apache/beam/sdks/v2/go/pkg/beam"
 	beamLog "github.com/apache/beam/sdks/v2/go/pkg/beam/log"
+	"github.com/apache/beam/sdks/v2/go/pkg/beam/register"
 	"github.com/apache/beam/sdks/v2/go/pkg/beam/x/beamx"
 )
 
@@ -17,8 +18,9 @@ var (
 
 func init() {
 	// DoFns should be registered with Beam to be available in distributed runners.
-	beam.RegisterFunction(strings.Title)
-	beam.RegisterFunction(logAndEmit)
+	register.Function3x0(logAndEmit)
+	register.Function1x1(strings.Title)
+	register.Emitter1[string]()
 }
 
 // You can also access the Context and "emit" zero or more values like FlatMap.
