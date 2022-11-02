@@ -12,8 +12,18 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    reviewers:
+      - damccorm
+      - lostluck
+      - jrmccluskey
+      - riteshghorse
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
+    reviewers:
+      - damccorm
+      - lostluck
+      - jrmccluskey
+      - riteshghorse
