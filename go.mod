@@ -10,7 +10,7 @@ module example.com/my_app
 
 go 1.18
 
-require github.com/apache/beam/sdks/v2 v2.48.0
+require github.com/apache/beam/sdks/v2 v2.48.2
 
 require (
 	cloud.google.com/go v0.110.0 // indirect
