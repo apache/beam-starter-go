@@ -8,7 +8,7 @@
 
 module example.com/my_app
 
-go 1.18
+go 1.20
 
 require github.com/apache/beam/sdks/v2 v2.48.2
 
