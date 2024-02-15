@@ -2,6 +2,7 @@
 
 If you want to clone this repository to start your own project,
 you can choose the license you prefer and feel free to delete anything related to the license you are dropping.
+See also https://beam.apache.org/get-started/quickstart/go/ for additional instructions for this quickstart.
 
 ## Before you begin
 
